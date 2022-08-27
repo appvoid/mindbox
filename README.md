@@ -1,4 +1,4 @@
-# MindBox
+# 🧠 MindBox 📦
 A minimal library to make neural networks easier.
 
 ### Quick Usage ⏱
