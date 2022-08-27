@@ -10,7 +10,7 @@ model.train()
 print(model.predict([1]))
 ```
 
-# Definition
+# Description
 MindBox: is a simple Python library to make neural networks in seconds!
 MindBox takes inspiration from minimal libraries like brain.js to make ML fun again. You can just go ahead and train a model in literally the time you take to walk to your kitchen...
 
