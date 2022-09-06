@@ -1,6 +1,11 @@
 # MindBox
 A minimal library to make neural networks easier.
 
+# Installation
+```
+pip install mindbox
+```
+
 ### Quick Usage ⏱
 ```
 from mindbox.core import network
