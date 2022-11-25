@@ -12,7 +12,7 @@ from mindbox.core import network
 model = network()
 model.dataset({'i':([1],[0]),'o':[0,1]})
 model.train()
-print(model.predict([1]))
+model.console()
 ```
 
 ### Description 📄
