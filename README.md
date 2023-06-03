@@ -50,13 +50,10 @@ The library automatically handles number of inputs for quick prototyping on real
 Omar Aflak from Towards Data Science, which made the tutorial which powers a good part of this work! https://towardsdatascience.com/math-neural-network-from-scratch-in-python-d6da9f29ce65
 
 ### Short-Term Goals 🎯
-- Documentation website
 - Text classification
 - Emoji support for Text Classification
 - Improved code quality and algorithms performance
-- Complete tests code
 
 ### Long-Term Goals 🎯
-- Image Classification
-- Possible Numba integration for training and inference
 - Library website
+- Documentation website
