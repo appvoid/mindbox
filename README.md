@@ -19,8 +19,13 @@ Later, if you want to use your new created network, you can just type save on th
 [type "save"] [hit enter]
 📥 Model saved as: model.weights
 # Sometime after saving...
+from mindbox.core import network
+import numpy as np
 model = network().load('your model name here or leave empty to use the default')
-model.console()
+def predict(sequence):
+    return np.average(model.predict([sequence])) 
+
+print(predict([1])) # expect a number near to 0
 ```
 
 ### Description 📄
