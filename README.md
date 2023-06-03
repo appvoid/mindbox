@@ -16,7 +16,7 @@ model.console()
 ```
 Later, if you want to use your new created network, you can just type save on the console (after testing with the `model.console()` method)
 ```
-save [hit enter]
+[type "save"] [hit enter]
 📥 Model saved as: model.weights
 # Sometime after saving...
 model = network().load('your model name here or leave empty to use the default')
