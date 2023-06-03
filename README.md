@@ -14,6 +14,14 @@ model.dataset({'i':([1],[0]),'o':[0,1]})
 model.train()
 model.console()
 ```
+Later, if you want to use your new created network, you can just type save on the console (after testing with the `model.console()` method)
+```
+save [hit enter]
+📥 Model saved as: model.weights
+# Sometime after saving...
+model = network().load('your model name here or leave empty to use the default')
+model.console()
+```
 
 ### Description 📄
 MindBox: is a simple Python library to make neural networks in seconds!
