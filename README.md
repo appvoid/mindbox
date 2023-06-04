@@ -52,6 +52,7 @@ Omar Aflak from Towards Data Science, which made the tutorial which powers a goo
 ### Short-Term Goals 🎯
 - Text classification
 - Emoji support for Text Classification
+- More examples: language models, computer vision, etc...
 - Improved code quality and algorithms performance
 
 ### Long-Term Goals 🎯
