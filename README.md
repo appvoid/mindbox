@@ -35,7 +35,7 @@ print(predict([1])) # expect a number near to 0
 ### Advanced 🤖
 ```
 from mindbox.core import network
-model = network('selu', debug=False)
+model = network('selu', debug=False) # supported activations are [sigmoid, tanh, relu, selu, gelu, swish]
 model.dataset({'i':([1],[0]),'o':[0,1]})
 model.layer(1, 5)
 model.layer(5, 3)
@@ -57,6 +57,16 @@ The library automatically handles number of inputs for quick prototyping on real
     learning_rate (.3)   : how fast the model will learn, a lower number ensures avoiding the well-known overfitting
     counter       (100)  : how many epochs should train before printing results
     threshold     (None) : stops training when the error (loss) rate is less than the threshold
+```
+```
+> activations
+    [big architectures]
+    sigmoid # this one works no matter the size of the architecture
+    tanh    # works for "medium-size" architectures, about 25 or even more nodes or two layers of 12 inputs
+    
+    [small architectures] 
+    all the activations left only work with medium or small number of nodes
+    relu, selu, gelu, swish...
 ```
 
 ### Big thanks to 😉
