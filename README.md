@@ -36,7 +36,7 @@ print(predict([1])) # expect a number near to 0
 MindBox: is a simple Python library to make neural networks in seconds!
 MindBox takes inspiration from minimal libraries like brain.js to make ML fun again. You can just go ahead and train a model in literally the time you take to walk to your kitchen...
 
-The library automatically handles number of inputs for quick prototyping on real data. You can change customize the model as you please:<br>
+The library automatically handles number of inputs for quick prototyping on real data. You can customize the model as you please:<br>
 
 ```
 > model.train(args)
