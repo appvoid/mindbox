@@ -32,6 +32,19 @@ def predict(sequence):
 print(predict([1])) # expect a number near to 0
 ```
 
+### Advanced 🤖
+```
+from mindbox.core import network
+model = network('selu', debug=False)
+model.dataset({'i':([1],[0]),'o':[0,1]})
+model.layer(1, 5)
+model.layer(5, 3)
+model.layer(3, 1)
+model.train(epochs=100, learning_rate=0.002)
+output = model.predict([1])[0]
+print(output)
+```
+
 ### Description 📄
 MindBox: is a simple Python library to make neural networks in seconds!
 MindBox takes inspiration from minimal libraries like brain.js to make ML fun again. You can just go ahead and train a model in literally the time you take to walk to your kitchen...
