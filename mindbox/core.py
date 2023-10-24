@@ -113,11 +113,7 @@ class network:
                 try:
                     data = input('>> ')
                     try:
-                        if (data == 'exit'): 
-                            os.system('cls'); break
-                        elif (data == 'clear'): 
-                            os.system('cls')
-                        elif (data == 'save'): 
+                        if (data == 'save'): 
                             console.log('📥 Model saved as: model.weights')
                             self.save()
                         else:
