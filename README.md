@@ -35,14 +35,29 @@ print(predict([1])) # expect a number near to 0
 ### Advanced 🤖
 ```
 from mindbox.core import network
-model = network('selu', debug=False) # supported activations are [sigmoid, tanh, relu, selu, gelu, swish]
-model.dataset({'i':([1],[0]),'o':[0,1]})
-model.layer(1, 5)
-model.layer(5, 3)
-model.layer(3, 1)
-model.train(epochs=100, learning_rate=0.002)
-output = model.predict([1])[0]
-print(output)
+
+# Create the model with the 'selu' activation function
+model = network('selu', debug=False)
+
+# Define the XOR dataset
+data = {
+    'i': ([0, 0], [0, 1], [1, 0], [1, 1]),
+    'o': [0, 1, 1, 0]
+}
+model.dataset(data)
+
+# Define the neural network architecture
+model.layer(2, 5)  # Input layer with 2 neurons (since XOR has 2 inputs) and a hidden layer with 5 neurons
+model.layer(5, 3)  # Hidden layer with 5 neurons connected to another hidden layer with 3 neurons
+model.layer(3, 1)  # Hidden layer with 3 neurons connected to an output layer with 1 neuron
+
+# Train the model
+model.train(epochs=1000, learning_rate=0.03)  # XOR might need more epochs to train
+
+# Predict the outputs for the XOR inputs
+for input_data in data['i']:
+    output = model.predict([[input_data]])[0]
+    print(f"Input: {input_data} => Output: {output}")
 ```
 
 ### Description 📄
