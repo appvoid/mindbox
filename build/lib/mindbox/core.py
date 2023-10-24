@@ -6,7 +6,7 @@
     Omar Aflak and anyone who posts even something on StackOverflow to help me achieve this
 '''
 # modules
-import os, numpy, mindbox.console as console; os.system('cls')
+import os, numpy, mindbox.console as console;
 from mindbox.network import Network
 from mindbox.fully_connected_layer import FCLayer
 from mindbox.activation_layer import ActivationLayer
@@ -113,11 +113,7 @@ class network:
                 try:
                     data = input('>> ')
                     try:
-                        if (data == 'exit'): 
-                            os.system('cls'); break
-                        elif (data == 'clear'): 
-                            os.system('cls')
-                        elif (data == 'save'): 
+                        if (data == 'save'): 
                             console.log('📥 Model saved as: model.weights')
                             self.save()
                         else:
